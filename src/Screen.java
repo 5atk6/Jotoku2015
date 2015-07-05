@@ -11,17 +11,18 @@ public class Screen extends JFrame{
 		setTitle("Igo");
 		setSize(700,600);
 		setLocationRelativeTo(null);
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		addComponentListener(new ComponentAdapter_JFrame());
-		
+
 		GoBan ban = new GoBan();
 		Container contentPane = getContentPane();
-	    contentPane.add(ban);
+		contentPane.add(ban);
 	}
-	
+
 	class ComponentAdapter_JFrame extends ComponentAdapter{
-	    public void componentResized(ComponentEvent e) {
-	      Screen.this.repaint();
-	    }
-	  }
+		public void componentResized(ComponentEvent e) {
+			Screen.this.repaint();
+		}
+	}
 }
